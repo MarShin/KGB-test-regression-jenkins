@@ -1,0 +1,35 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    
+  <f:section title="Filter features">
+    <f:entry field="useFilters" title="${%UseFilter}">
+      <f:checkbox />
+    </f:entry>
+    <f:entry field="testName" title="${%TestName}" >
+      <f:textbox default="${descriptor.getTestName()}"/>
+    </f:entry>
+  </f:section>
+
+  <f:section title="Mail features">
+    <f:entry field="useMails" title="${%UseMails}">
+      <f:checkbox />
+    </f:entry>
+    <f:entry field="recipients" title="${%Recipients}">
+      <f:textbox default="me@somedomain.com you@somedomain.com"/>
+    </f:entry>
+    <f:entry field="sendToCulprits" title="${%SendToCulprits}">
+      <f:checkbox />
+    </f:entry> 
+    <f:entry field="domain" title="${%Domain}">
+      <f:textbox default="@mydomain.com"/>
+    </f:entry>
+  </f:section>
+
+  <f:section title="Text Features">
+    <f:entry field="useTexts" title="${%UseTexts}">
+      <f:checkbox/>
+    </f:entry>
+    <f:entry field="textMessageRecipients" title="${%TextMessageRecipients}">
+      <f:textbox default="${descriptor.getTextMessageRecipients()}"/>
+    </f:entry>
+  </f:section>
+</j:jelly>

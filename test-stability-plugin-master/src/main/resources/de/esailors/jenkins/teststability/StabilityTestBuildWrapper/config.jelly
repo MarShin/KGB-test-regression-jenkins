@@ -1,0 +1,11 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+      <!-- These are for the svn build criteria -->
+	
+	        <f:entry field="committerName" title="${%CommitterName}" >
+	          <f:textbox default="${descriptor.getCommitterName()}"/>
+	        </f:entry>
+	
+	        <f:entry field="SCMKeyword" title="${%SCMKeyword}" >
+	          <f:textbox default="${descriptor.getSCMKeyword()}"/>
+	        </f:entry>
+</j:jelly>
